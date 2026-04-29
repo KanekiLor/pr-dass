@@ -12,8 +12,8 @@ initial_cookies = session.cookies.get_dict()
 print("Cookies before login:", initial_cookies)
 
 credentials = {
-    "email": "test@mail.com",
-    "password": "test123"
+    "email": "admin123@mail.com",
+    "password": "Parolanoua123"
 }
 
 response = session.post(url_login, data=credentials)

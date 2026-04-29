@@ -8,13 +8,13 @@
 <body>
   <nav>
     {% if session.get("user_id") %}
-      <a href="{{ url_for('profile') }}">Profile</a> |
+      <a href="{{ url_for('profile') }}">Profil</a> |
       <form action="{{ url_for('logout') }}" method="post" style="display:inline;">
-        <button type="submit">Logout</button>
+        <button type="submit">Deconectare</button>
       </form>
     {% else %}
-      <a href="{{ url_for('login') }}">Login</a> |
-      <a href="{{ url_for('register') }}">Register</a>
+      <a href="{{ url_for('login') }}">Conectare</a> |
+      <a href="{{ url_for('register') }}">Înregistrare</a>
     {% endif %}
   </nav>
 

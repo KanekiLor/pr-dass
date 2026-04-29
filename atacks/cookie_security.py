@@ -11,8 +11,8 @@ print("Cookie Security Assessment")
 print("=" * 40)
 
 credentials = {
-    "email": "test@mail.com",
-    "password": "test123"
+    "email": "admin123@mail.com",
+    "password": "Parolanoua123"
 }
 
 response = session.post(url_login, data=credentials)

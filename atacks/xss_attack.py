@@ -6,15 +6,16 @@ url_login = "http://127.0.0.1:5000/login"
 url_profile = "http://127.0.0.1:5000/profile"
 
 credentials = {
-    "email": "admin@mail.com",
-    "password": "parolanoua"
+    "email": "test_secure@mail.com",
+    "password": "SecurePass123"
 }
 
 session = requests.Session()
 response = session.post(url_login, data=credentials)
 
+print("Login response:", response.text)
 if "Logat ca:" not in response.text:
-    print("Login failed. Create test@mail.com with password test123")
+    print("Login failed.")
     exit(1)
 
 xss_payload = '<img src=x onerror="alert(\'XSS Vulnerability\')">'

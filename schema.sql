@@ -10,6 +10,7 @@ CREATE TABLE users (
   created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
   locked INTEGER DEFAULT 0,
   reset_token TEXT DEFAULT NULL,
+  reset_token_expires DATETIME DEFAULT NULL,
   bio TEXT DEFAULT NULL
 );
 
