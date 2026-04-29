@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Profil</h2>
+
+<p><b>Email:</b> {{ user["email"] }}</p>
+<p><b>Rol:</b> {{ user["role"] }}</p>
+<p><b>Creat:</b> {{ user["created_at"] }}</p>
+
+<h3>Bio</h3>
+<p>{{ user["bio"]|safe }}</p>
+
+<form method="post">
+    <textarea name="bio" rows="4" cols="50">{{ user["bio"] or '' }}</textarea>
+    <button type="submit">Update Bio</button>
+</form>
+
+<h3>Status Cont</h3>
+<p>Cont Blocat: {% if user["locked"] %}Da{% else %}Nu{% endif %}</p>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Înregistrare</h2>
+<form method="post">
+  <label>Email</label><br/>
+  <input name="mail"/><br/><br/>
+  <label>Parolă</label><br/>
+  <input name="password" type="password" required /><br/><br/>
+  <button type="submit">Crează Cont</button>
+</form>
+
+<p>Ai deja cont? <a href="{{ url_for('login') }}">Conectează-te aici</a></p>
+{% endblock %}
